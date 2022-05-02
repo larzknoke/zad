@@ -1,0 +1,65 @@
+@import "utils/_tailwind.css";
+@import "utils/_accessibility.css";
+
+a:hover {
+	@apply underline underline-offset-4;
+}
+
+/* header {
+	padding: 0 7%;
+} */
+
+.leistungen-horizontal,
+.leistungen-vertical {
+	@apply hover:no-underline flex flex-col text-zad-blue-600 space-y-2 cursor-pointer  hover:scale-110 transition-all;
+}
+
+div[class^="leistungen-icon-"] {
+	@apply inline-flex items-center justify-center mx-auto  text-zad-blue-600 transition-colors duration-300 bg-white rounded-full border-4 p-4 border-zad-blue-600;
+}
+
+.leistungen-icon-vertical {
+	@apply w-16 h-16;
+}
+.leistungen-icon-horizontal {
+	@apply w-36 h-36;
+}
+
+.leistungen-vertical:hover .leistungen-icon-vertical,
+.leistungen-horizontal:hover .leistungen-icon-horizontal {
+	@apply bg-zad-blue-600 text-white;
+}
+
+h1 {
+	@apply text-zad-blue-600 text-4xl mb-8;
+}
+
+h2 {
+	@apply text-zad-blue-600 font-bold text-2xl mb-4;
+}
+h3 {
+	@apply text-red-700 font-bold text-xl mb-4;
+}
+
+p {
+	@apply text-zad-blue-600 mb-8;
+}
+
+.button {
+	@apply bg-zad-blue-600 text-white px-8 py-4 rounded hover:no-underline hover:bg-white hover:text-zad-blue-600 transition-all duration-150 border-2 border-zad-blue-600 whitespace-nowrap;
+}
+
+.datenschutz p {
+	@apply mb-4;
+}
+.datenschutz h1 {
+	@apply mt-8;
+}
+
+li {
+	@apply mb-2;
+}
+
+.content-wrapper {
+	@apply mx-auto max-w-[130em] p-32 bg-zad-blue-200 bg-opacity-95 mt-16 flex space-x-32 drop-shadow-xl;
+}
