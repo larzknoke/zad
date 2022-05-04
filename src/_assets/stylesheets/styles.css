@@ -11,7 +11,7 @@ a:hover {
 
 .leistungen-horizontal,
 .leistungen-vertical {
-	@apply hover:no-underline flex flex-col text-zad-blue-600 space-y-2 cursor-pointer  hover:scale-105 transition-all;
+	@apply hover:no-underline flex flex-col text-zad-blue-600 space-y-2 cursor-pointer  hover:scale-110 transition-all;
 }
 
 div[class^="leistungen-icon-"] {
