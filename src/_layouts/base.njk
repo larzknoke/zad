@@ -30,56 +30,66 @@
     <link rel="icon" href="/static/favicon.ico" sizes="any" />
     <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
   </head>
-  <body class="">
-    <div class="flex flex-col -z-50 w-full mx-auto absolute top-[15%]">
-      <div
-        class="bg-[url('/static/images/berg2.svg')] bg-no-repeat bg-bottom bg-contain h-[50vh]"
-      ></div>
-      <div class="w-full bg-zad-blue-100 h-screen"></div>
-    </div>
-    <header class="flex flex-col mx-auto py-8 max-w-[130em] px-32">
-      <div class="flex w-full justify-between">
-        <div class="flex space-x-8">
-          <div class="text-zad-blue-600">
-            <i class="fa-solid fa-phone text-gray-400 mr-1"></i> 0 55 51 / 96 88
-            - 0
+  <body class="h-full">
+    <header class="flex flex-col py-8 px-32 z-50 absolute w-full mx-auto">
+      <div class="max-w-[130em] mx-auto w-full">
+        <div class="flex w-full justify-between">
+          <div class="flex space-x-8">
+            <div class="text-zad-blue-600">
+              <i class="fa-solid fa-phone text-gray-400 mr-1"></i> 0 55 51 / 96
+              88 - 0
+            </div>
+            <div class="text-zad-blue-600">
+              <i class="fa-solid fa-envelope text-gray-400 mr-1"></i>
+              <a class="" href="mailto:info@zad-northeim.de"
+                >info@zad-northeim.de</a
+              >
+            </div>
           </div>
-          <div class="text-zad-blue-600">
-            <i class="fa-solid fa-envelope text-gray-400 mr-1"></i>
-            <a class="" href="mailto:info@zad-northeim.de"
-              >info@zad-northeim.de</a
-            >
+          <div class="text-zad-blue-600 space-x-4 flex">
+            <a href="#">Kunden-Login</a>
+            <a href="/impressum">Impressum</a>
+            <a href="/datenschutz">Datenschutz</a>
+            <a
+              href="https://www.facebook.com/ZADGmbH/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="h-6"
+                src="/static/images/facebook.svg"
+                alt="Facebook"
+            /></a>
           </div>
         </div>
-        <div class="text-zad-blue-600 space-x-4 flex">
-          <a href="#">Kunden-Login</a>
-          <a href="/impressum">Impressum</a>
-          <a href="/datenschutz">Datenschutz</a>
-          <a
-            href="https://www.facebook.com/ZADGmbH/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img class="h-6" src="/static/images/facebook.svg" alt="Facebook"
-          /></a>
-        </div>
-      </div>
-      <div class="flex mt-24 justify-between items-center">
-        <div class="logo w-64">
-          <a href="/">
-            <img src="/static/images/zad_logo.svg" width="100%" />
-          </a>
-        </div>
-        <div class="text-zad-blue-600 space-x-6 flex">
-          <a href="/">Home</a>
-          <a href="#">Unternehmen</a>
-          <a href="/leistung-overview" class="leistung-trigger">Leistungen</a>
-          <a href="/stellenangebote">Stellenangebote</a>
-          <a href="/kontakt">Kontakt/Anfahrt</a>
-          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <div class="flex mt-24 justify-between items-center">
+          <div class="logo w-64">
+            <a href="/">
+              <img src="/static/images/zad_logo.svg" width="100%" />
+            </a>
+          </div>
+          <div class="text-zad-blue-600 space-x-6 flex">
+            <a href="/">Home</a>
+            <a href="#">Unternehmen</a>
+            <a href="/leistung-overview" class="leistung-trigger">Leistungen</a>
+            <a href="/stellenangebote">Stellenangebote</a>
+            <a href="/kontakt">Kontakt/Anfahrt</a>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </div>
         </div>
       </div>
     </header>
     {{ content | safe }}
+    <script>
+      const open = localStorage.getItem("open");
+      const isRoot = localStorage.getItem("isRoot");
+      if (
+        (open == "true" && isRoot == "false") ||
+        open == undefined ||
+        isRoot == undefined
+      ) {
+        document.querySelector(".content").classList.add("open");
+      }
+    </script>
   </body>
   <script src="/static/app.min.js" defer></script>
 </html>

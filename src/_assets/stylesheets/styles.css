@@ -11,7 +11,7 @@ a:hover {
 
 .leistungen-horizontal,
 .leistungen-vertical {
-	@apply hover:no-underline flex flex-col text-zad-blue-600 space-y-2 cursor-pointer  hover:scale-110 transition-all;
+	@apply hover:no-underline flex flex-col text-zad-blue-600 space-y-2 cursor-pointer  hover:scale-105 transition-all;
 }
 
 div[class^="leistungen-icon-"] {
@@ -62,4 +62,13 @@ li {
 
 .content-wrapper {
 	@apply mx-auto max-w-[130em] p-32 bg-zad-blue-200 bg-opacity-95 mt-16 flex space-x-32 drop-shadow-xl;
+}
+
+.open .hand {
+	z-index: -999;
+}
+
+.content.open .gras-left,
+.content.open .gras-right {
+	width: 5%;
 }

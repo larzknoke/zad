@@ -4,22 +4,34 @@ title: Eleventy Web Starter - Eleventy, esbuild, Tailwind and PostCSS
 description: Eleventy Web Starter is a lightweight Eleventy boilerplate utilising esbuild, Tailwind CSS and Post CSS
 ---
 
-<main id="main" class="">
+<main id="main" class="transition-all duration-200 relative pt-[150px] h-full">
+  <div class="flex flex-col h-full">
+    <div
+      class="bg-[url('/static/images/berg2.svg')] bg-no-repeat bg-bottom bg-contain h-[500px]"
+    ></div>
+    <div class="w-full bg-zad-blue-100 flex-grow">
+      <div class="p-32">
+        <p>INHALT</p>
+        <p>INHALT</p>
+        <p>INHALT</p>
+      </div>
+    </div>
+  </div>
   <div>
     <img
       src="/static/images/gras3tiny.png"
       alt="Gras"
-      class="gras hidden md:block absolute bottom-0 left-0 w-2/4 z-20 h-3/6 object-cover transition-all duration-300"
+      class="gras-left hidden md:block absolute bottom-0 left-0 w-2/4 z-20 h-3/6 object-cover transition-all duration-500"
     />
     <img
       src="/static/images/hand.png"
       alt="Gras"
-      class="hand hidden md:block absolute bottom-0 left-1/4 z-10 w-2/4 h-2/6 object-contain transition-all duration-300 opacity-0"
+      class="hand hidden md:block absolute bottom-0 left-1/4 z-10 w-2/4 h-2/6 object-contain transition-all duration-500 opacity-0"
     />
     <img
       src="/static/images/gras3tiny.png"
       alt="Gras"
-      class="hidden md:block absolute bottom-0 right-0 w-2/4 h-3/6 object-cover"
+      class="gras-right hidden md:block absolute bottom-0 right-0 w-2/4 h-3/6 object-cover transition-all duration-500"
     />
   </div>
 </main>

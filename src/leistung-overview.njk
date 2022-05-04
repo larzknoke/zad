@@ -4,23 +4,59 @@ title: Eleventy Web Starter - Eleventy, esbuild, Tailwind and PostCSS
 description: Eleventy Web Starter is a lightweight Eleventy boilerplate utilising esbuild, Tailwind CSS and Post CSS
 ---
 
-<main id="main" class="mx-auto max-w-[130em] p-40">
-    <div class="space-x-24 flex mx-auto justify-center text-center">
-        <a href="/leistung-heilberufe" class="leistungen-horizontal">
-            <div class="leistungen-icon-horizontal"><i class="fa-solid fa-truck-medical text-6xl "></i></div>
-            <span class="font-bold">Krankentransporte</span>
-        </a>
-        <a href="/leistung-heilberufe" class="leistungen-horizontal">
-            <div class="leistungen-icon-horizontal"><i class="fa-solid fa-hand-paper text-6xl "></i></div>
-            <span class="font-bold">Pflegedienste</span>
-        </a>
-        <a href="/leistung-heilberufe" class="leistungen-horizontal">
-            <div class="leistungen-icon-horizontal"><i class="fas fa-heartbeat text-6xl "></i></div>
-            <span class="font-bold">Heilberufe</span>
-        </a>
-        <a href="/leistung-heilberufe" class="leistungen-horizontal">
-            <div class="leistungen-icon-horizontal"><i class="fas fa-laptop-medical text-6xl "></i></div>
-            <span class="font-bold">Softwarelösungen</span>
-        </a>
+<main
+  id="main"
+  class="mx-auto content transition-all duration-200 relative pt-[150px] "
+>
+  <div class="flex flex-col z-30 ">
+    <div
+      class="bg-[url('/static/images/berg2.svg')] bg-no-repeat bg-bottom bg-contain h-[500px]"
+    ></div>
+    <div class="w-full bg-zad-blue-100 h-[100%] flex">
+        <div class="space-x-24 flex mx-auto justify-center text-center p-32 ">
+            <a href="/leistung-heilberufe" class="leistungen-horizontal">
+              <div class="leistungen-icon-horizontal">
+                <i class="fa-solid fa-truck-medical text-6xl"></i>
+              </div>
+              <span class="font-bold">Krankentransporte</span>
+            </a>
+            <a href="/leistung-heilberufe" class="leistungen-horizontal">
+              <div class="leistungen-icon-horizontal">
+                <i class="fa-solid fa-hand-paper text-6xl"></i>
+              </div>
+              <span class="font-bold">Pflegedienste</span>
+            </a>
+            <a href="/leistung-heilberufe" class="leistungen-horizontal">
+              <div class="leistungen-icon-horizontal">
+                <i class="fas fa-heartbeat text-6xl"></i>
+              </div>
+              <span class="font-bold">Heilberufe</span>
+            </a>
+            <a href="/leistung-heilberufe" class="leistungen-horizontal">
+              <div class="leistungen-icon-horizontal">
+                <i class="fas fa-laptop-medical text-6xl"></i>
+              </div>
+              <span class="font-bold">Softwarelösungen</span>
+            </a>
+          </div>
+      </div>
     </div>
+  </div>
+  <div class=" ">
+    <img
+      src="/static/images/gras3tiny.png"
+      alt="Gras"
+      class="gras-left hidden md:block absolute bottom-0 left-0 w-2/4 h-[60%] object-cover transition-all duration-500 -translate-x-12"
+    />
+    <img
+      src="/static/images/hand.png"
+      alt="Gras"
+      class="hand hidden md:block absolute bottom-0 left-1/4 w-2/4 h-2/6 object-contain transition-all duration-500 opacity-100 translate-x-16"
+    />
+    <img
+      src="/static/images/gras3tiny.png"
+      alt="Gras"
+      class="gras-right hidden md:block absolute bottom-0 right-0 w-2/4 h-[60%] object-cover transition-all duration-500"
+    />
+  </div>
 </main>
